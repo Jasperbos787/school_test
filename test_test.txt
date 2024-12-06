@@ -1,0 +1,33 @@
+Hallo Justin. Ik denk dat als ik dit nu laat zien, ik dit nu laat zien. Ok. Ik schrijf deze tekst op 6 december: hieronder staat een code voor de toets bijvoorbeeld:
+
+import random
+import string
+
+def generate_password(length=5):
+    """
+    Generate a unique password with a length of 12 characters.
+    """
+    # Define the characters that can be used in the password
+    all_characters = string.ascii_letters + string.digits + string.punctuation
+    
+    # Generate a password with 5 tokens
+    tokens = []
+    tokens.append(random.choice(string.ascii_lowercase))  # Lowercase letter
+    tokens.append(random.choice(string.ascii_uppercase))  # Uppercase letter
+    tokens.append(random.choice(string.digits))  # Number
+    tokens.append(random.choice(string.punctuation))  # Special character
+    tokens.append(random.choice(all_characters))  # Any character
+    
+    # Add additional characters to meet the length requirement
+    for _ in range(length - 5):
+        tokens.append(random.choice(all_characters))
+    
+    # Shuffle the tokens to ensure randomness
+    random.shuffle(tokens)
+    
+    return ''.join(tokens)
+
+# Generate and print a password
+print("Generated Password: ", generate_password())
+
+Deze code is gemaakt door ChatGPT, maar het kan ook een code voor de toets zijn. Veel plezier verder. Doei.
